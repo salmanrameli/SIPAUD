@@ -218,4 +218,11 @@ class GuruController extends Controller
 
         return view('guru.nilai.ubah');
     }
+
+    public function showEditForm($id, $siswa)
+    {
+        $data = DB::table('nilai_siswa')->where([['id', '=', $id], ['nomor_induk', '=', $siswa]])->get()->first();
+
+        return view('guru.nilai.ubah_nilai')->with('nilai', $data);
+    }
 }
