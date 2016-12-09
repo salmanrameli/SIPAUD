@@ -3,6 +3,8 @@
 Aplikasi web sebagai sistem informasi bagi sekolah pendidikan anak usia dini
 ##Spesifikasi Aplikasi##
 - Terdapat 3 jenis pengguna pada sistem informasi ini, yaitu petugas tata usaha yang bertindak sebagai administrator, guru, dan kepala sekolah
+- Pengguna akan diarahkan ke homepage yang sesuai dengan jabatannya setelah berhasil login
+- Membutuhkan koneksi ke database MySQL yang berisi tabel user, siswa, pelajaran, dan nilai_siswa
 
 ###Peran dan Kemampuan Petugas Tata Usaha###
 - Melakukan pengelolaan data siswa
