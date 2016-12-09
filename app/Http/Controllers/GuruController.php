@@ -216,6 +216,6 @@ class GuruController extends Controller
     {
         $siswa = nilai_siswa::all();
 
-        return view('guru.nilai.ubah.all');
+        return view('guru.nilai.ubah');
     }
 }
