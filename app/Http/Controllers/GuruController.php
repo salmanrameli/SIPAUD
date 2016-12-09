@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\nilai_siswa;
 use App\pelajaran;
 use App\User;
 use Illuminate\Http\Request;
@@ -209,5 +210,12 @@ class GuruController extends Controller
         $siswa = DB::table('nilai_siswa')->where('nomor_induk', '=', $id)->get();
 
         return view('guru.nilai.detail nilai')->with('hasil', $siswa);
+    }
+
+    public function ubahNilai()
+    {
+        $siswa = nilai_siswa::all();
+
+        return view('guru.nilai.ubah.all');
     }
 }
