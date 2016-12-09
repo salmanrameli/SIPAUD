@@ -28,6 +28,13 @@
                 <td>{{ $nilai->komentar }}</td>
             </tr>
             <tr>
+                <td>
+                    <div class="pull-left">
+                        <a href="{{ route('guru.nilai.edit_nilai', ['id' => $nilai->id, 'siswa' => $nilai->nomor_induk]) }}"><button type="button" class="btn btn-default">Ubah Nilai</button></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <th><br></th>
                 <td><br></td>
             </tr>
