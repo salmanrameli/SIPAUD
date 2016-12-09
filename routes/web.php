@@ -315,6 +315,11 @@ Route::get('guru/nilai/edit', [
     'uses' => 'GuruController@ubahNilai'
 ]);
 
+Route::get('guru/nilai/edit/{id}-{siswa}', [
+    'as' => 'guru.nilai.edit_nilai',
+    'uses' => 'GuruController@showEditForm'
+]);
+
 /*
  * Rute Kepala Sekolah
  */
