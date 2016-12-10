@@ -33,6 +33,11 @@
                         <a href="{{ route('guru.nilai.edit_nilai', ['id' => $nilai->id, 'siswa' => $nilai->nomor_induk]) }}"><button type="button" class="btn btn-default">Ubah Nilai</button></a>
                     </div>
                 </td>
+                {{--<td>--}}
+                    {{--<div class="pull-right">--}}
+                        {{--<a href=""><button type="button" class="btn btn-danger">Hapus Nilai</button></a>--}}
+                    {{--</div>--}}
+                {{--</td>--}}
             </tr>
             <tr>
                 <th><br></th>
