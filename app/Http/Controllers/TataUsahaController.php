@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-
+use App\pelajaran;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -143,7 +143,9 @@ class TataUsahaController extends Controller
 
     public function pengelolaanTU()
     {
-        return view('tu.pengelolaan tu.index');
+        $tu = DB::table('users')->where('Jabatan', '=', 'Tata Usaha')->get();
+
+        return view('tu.pengelolaan tu.index')->with('hasil', $tu);
     }
 
     public function pengelolaanGuru()
@@ -158,7 +160,9 @@ class TataUsahaController extends Controller
 
     public function pengelolaanPelajaran()
     {
-        return view('tu.pengelolaan pelajaran.index');
+        $pelajaran = pelajaran::all();
+
+        return view('tu.pengelolaan pelajaran.index')->with('hasil', $pelajaran);
     }
 
     public function getProfile()
