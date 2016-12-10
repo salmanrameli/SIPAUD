@@ -205,7 +205,7 @@ class GuruController extends Controller
         return view('guru.nilai.semua siswa')->with('hasil', $siswa);
     }
 
-    public function detailNilai($id)
+    public function showNilai($id)
     {
         $siswa = DB::table('nilai_siswa')->where('nomor_induk', '=', $id)->get();
 
@@ -214,9 +214,10 @@ class GuruController extends Controller
 
     public function ubahNilai()
     {
-        $siswa = nilai_siswa::all();
+//        $siswa = DB::table('nilai_siswa')->distinct()->get();
+        $siswa = Siswa::all();
 
-        return view('guru.nilai.ubah');
+        return view('guru.nilai.ubah')->with('hasil', $siswa);
     }
 
     public function showEditForm($id, $siswa)
