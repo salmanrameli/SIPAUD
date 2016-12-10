@@ -79,11 +79,11 @@
                             <li>
                                 <a href="{{ route('guru.registrasi nilai') }}"><i class="fa fa-save fa-fw"></i> Registrasi Nilai Siswa</a>
                             </li>
+                            {{--<li>--}}
+                                {{--<a href="{{ route('guru.abcde') }}"><i class="fa fa-save fa-fw"></i> Ubah Nilai Siswa</a>--}}
+                            {{--</li>--}}
                             <li>
-                                <a href="{{ route('guru.registrasi nilai') }}"><i class="fa fa-save fa-fw"></i> Ubah Nilai Siswa</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('guru.nilai.all') }}"><i class="fa fa-book fa-fw"></i> Lihat Nilai Siswa</a>
+                                <a href="{{ route('guru.nilai.all') }}"><i class="fa fa-book fa-fw"></i> Lihat / Ubah Nilai Siswa</a>
                             </li>
                         </ul>
                     </div>
