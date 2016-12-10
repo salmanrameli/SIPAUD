@@ -7,11 +7,11 @@
 @section('content')
     <div class="col-lg-12">
         <table class="table">
-            @foreach($hasil as $siswa)
+            @foreach($hasil as $nilai)
                 <tr>
-                    <td>{{ $siswa->nama }}</td>
+                    <td>{{ $nilai->nama }}</td>
                     <td><div class="pull-right">
-                            <a href="{{ route('guru.nilai.show', ['id' => $siswa->id]) }}"><button type="button" class="btn btn-default">Lihat Nilai</button></a>
+                            <a href="{{ route('guru.nilai.edit_nilai', ['id' => $nilai->id, 'siswa' => $nilai->nomor_induk]) }}"><button type="button" class="btn btn-default">Ubah Nilai</button></a>
                         </div></td>
                 </tr>
             @endforeach
