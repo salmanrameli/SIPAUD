@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+
 /*
  * Rute Tata Usaha
  */
@@ -225,6 +226,16 @@ Route::get('/guru', [
     'uses' => 'GuruController@index']
 );
 
+Route::get('guru/nilai/ubah', [
+    'as' => 'guru.abcde',
+    'uses' => 'GuruController@ubahNilai'
+]);
+
+Route::get('guru/nilai/edit/{id}-{siswa}', [
+    'as' => 'guru.nilai.edit_nilai',
+    'uses' => 'GuruController@showEditForm'
+]);
+
 Route::get('guru/profil', [
     'as' => 'guru.profile',
     'uses' => 'GuruController@getProfile'
@@ -307,18 +318,15 @@ Route::get('guru/nilai', [
 
 Route::get('guru/nilai/{id}', [
     'as' => 'guru.nilai.show',
-    'uses' => 'GuruController@detailNilai'
+    'uses' => 'GuruController@showNilai'
 ]);
 
-Route::get('guru/nilai/edit', [
-    'as' => 'guru.nilai.edit',
-    'uses' => 'GuruController@ubahNilai'
+Route::get('guru/nilai/ganti_nilai', [
+    'as' => 'guru.nilai.ubah_nilai',
+    'uses' => 'GuruController@index'
 ]);
 
-Route::get('guru/nilai/edit/{id}-{siswa}', [
-    'as' => 'guru.nilai.edit_nilai',
-    'uses' => 'GuruController@showEditForm'
-]);
+
 
 /*
  * Rute Kepala Sekolah
