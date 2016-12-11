@@ -75,7 +75,7 @@ class TataUsahaController extends Controller
 
         Session::flash('flash_message', 'Petugas TU berhasil didaftarkan');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_tu');
     }
 
     /**
@@ -121,7 +121,7 @@ class TataUsahaController extends Controller
 
         Session::flash('flash_message', 'Petugas berhasil diubah');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_tu');
     }
 
     /**
@@ -138,7 +138,7 @@ class TataUsahaController extends Controller
 
         Session::flash('flash_message', 'Petugas berhasil dihapus dari sistem');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_tu');
     }
 
     public function pengelolaanTU()
@@ -150,7 +150,9 @@ class TataUsahaController extends Controller
 
     public function pengelolaanGuru()
     {
-        return view('tu.pengelolaan guru.index');
+        $guru = DB::table('users')->where('Jabatan', '=', 'Guru')->get();
+
+        return view('tu.pengelolaan guru.index')->with('hasil', $guru);
     }
 
     public function pengelolaanSiswa()
