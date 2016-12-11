@@ -92,7 +92,17 @@ class NilaiSiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+//        $nilai = nilai_siswa::findorFail($id);
+
+        $input = $request->all();
+
+        DB::table('nilai_siswa')->where([['id', $request->id],['nomor_induk', $request->nomor_induk]])->update(['id' => $id,'id_guru' => $request->id_guru,'nomor_induk' => $request->nomor_induk,'nilai' => $request->nilai, 'komentar' => $request->komentar]);
+
+//        $nilai->fill($input)->save();
+
+        Session::flash('flash_message', 'Nilai berhasil diubah');
+
+        return redirect()->route('guru.nilai.show', $request->nomor_induk);
     }
 
     /**
