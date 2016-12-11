@@ -42,8 +42,8 @@
                 </div>
 
                 <ul class="nav navbar-top-links navbar-right">
-                    <li><a href="{{ route('kepsek.profile') }}"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
+                    {{--<li><a href="{{ route('kepsek.profile') }}"><i class="fa fa-user fa-fw"></i> User Profile</a>--}}
+                    {{--</li>--}}
                     <li><a href="{{ url('/logout') }}">
                             <i class="fa fa-sign-out fa-fw"></i> Logout
                         </a>
