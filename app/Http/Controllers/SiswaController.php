@@ -146,6 +146,6 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::all();
 
-        return view('tu.pengelolaan nilai.semua siswa')->with('hasil', $siswa);
+        return view('tu.pengelolaan siswa.semua siswa')->with('hasil', $siswa);
     }
 }
