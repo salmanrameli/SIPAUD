@@ -171,7 +171,7 @@ Route::delete('tu/siswa/{id}', [
 
 Route::get('tu/siswa/nilai/all', [
     'as' => 'tu.siswa.nilai',
-    'uses' => 'SiswaController@viewAllSiswa'
+    'uses' => 'NilaiSiswaController@viewAllNilai'
 ]);
 
 Route::get('tu/siswa/nilai/{id}', [
