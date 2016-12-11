@@ -178,18 +178,18 @@ class GuruController extends Controller
         return view('guru.ubah password')->with('guru', $guru);
     }
 
-    public function updatePassword(Request $request, $id)
-    {
-        $guru = User::findorFail($id);
-
-        $input = $request->password();
-
-        $guru->fill(bcrypt($input))->save();
-
-        Session::flash('flash_message', 'Password berhasil diubah');
-
-        return redirect()->route('guru.home');
-    }
+//    public function updatePassword(Request $request, $id)
+//    {
+//        $guru = User::findorFail($id);
+//
+//        $input = $request->password();
+//
+//        $guru->fill(bcrypt($input))->save();
+//
+//        Session::flash('flash_message', 'Password berhasil diubah');
+//
+//        return redirect()->route('guru.home');
+//    }
 
     public function lihatPelajaran()
     {
