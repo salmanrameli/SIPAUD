@@ -77,7 +77,7 @@ class GuruController extends Controller
 
         Session::flash('flash_message', 'Guru berhasil didaftarkan');
 
-        return redirect()->back();
+        return redirect()->route('tu.pengelolaan_guru');
     }
 
     /**
@@ -123,7 +123,7 @@ class GuruController extends Controller
 
         Session::flash('flash_message', 'Guru berhasil diubah');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_guru');
     }
 
     /**
@@ -140,7 +140,7 @@ class GuruController extends Controller
 
         Session::flash('flash_message', 'Guru berhasil dihapus dari sistem');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_guru');
     }
 
     public function viewAllGuru()
