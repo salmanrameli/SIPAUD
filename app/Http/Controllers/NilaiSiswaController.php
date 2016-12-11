@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\nilai_siswa;
 use App\pelajaran;
+use App\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
@@ -152,5 +153,12 @@ class NilaiSiswaController extends Controller
         $pelajaran = pelajaran::findorFail('7');
 
         return view('guru.nilai.nilai_7')->with('pelajaran', $pelajaran);
+    }
+
+    public function viewAllNilai()
+    {
+        $siswa = Siswa::all();
+
+        return view('tu.pengelolaan nilai.semua siswa')->with('hasil', $siswa);
     }
 }
