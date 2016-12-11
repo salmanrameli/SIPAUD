@@ -76,7 +76,7 @@ class SiswaController extends Controller
 
         Session::flash('flash_message', 'Siswa berhasil didaftarkan');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_siswa');
     }
 
     /**
@@ -122,7 +122,7 @@ class SiswaController extends Controller
 
         Session::flash('flash_message', 'Siswa berhasil diubah');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_siswa');
     }
 
     /**
@@ -139,7 +139,7 @@ class SiswaController extends Controller
 
         Session::flash('flash_message', 'Siswa berhasil dihapus dari sistem');
 
-        return redirect()->route('tu.home');
+        return redirect()->route('tu.pengelolaan_siswa');
     }
 
     public function viewAllSiswa()
