@@ -326,7 +326,10 @@ Route::get('guru/nilai/ganti_nilai', [
     'uses' => 'GuruController@index'
 ]);
 
-
+Route::patch('guru/nilai/{id}/update', [
+    'as' => 'guru.nilai.update',
+    'uses' => 'NilaiSiswaController@update'
+]);
 
 /*
  * Rute Kepala Sekolah
