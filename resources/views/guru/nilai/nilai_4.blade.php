@@ -7,12 +7,12 @@
 @section('content')
     {{ Form::open(['route' => 'guru.nilai.store']) }}
 
-    <div class="form-group">
+    <div class="form-group hidden">
         {{ Form::label('id', 'ID Pelajaran', ['class' => 'control-label']) }}
         {{ Form::text('id', $pelajaran->id, ['class' => 'form-control']) }}
     </div>
 
-    <div class="form-group">
+    <div class="form-group hidden">
         {{ Form::label('id_guru', 'ID Guru Pengajar', ['class' => 'control-label']) }}
         {{ Form::text('id_guru', $pelajaran->id_guru, ['class' => 'form-control']) }}
     </div>
