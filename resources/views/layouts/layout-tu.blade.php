@@ -88,7 +88,7 @@
 
 
         <div id="wrapper">
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -96,7 +96,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="">Sistem Informasi Yaa Bunayya</a>
+                    <a style="color:white" class="navbar-brand" href="">Sistem Informasi Yaa Bunayya</a>
                 </div>
 
                 <ul class="nav navbar-top-links navbar-right">
@@ -105,8 +105,8 @@
                     {{--</a>--}}
                     {{--<li><a href="{{ route('tu.profile') }}"><i class="fa fa-user fa-fw"></i> User Profile</a>--}}
                     {{--</li>--}}
-                    <li><a href="{{ url('/logout') }}">
-                            <i class="fa fa-sign-out fa-fw"></i> Logout
+                    <li><a style="color:white" href="{{ url('/logout') }}">
+                            <i style="color:white" class="fa fa-sign-out fa-fw"></i> Logout
                         </a>
                     </li>
                 </ul>
