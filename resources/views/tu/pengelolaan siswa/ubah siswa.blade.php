@@ -1,11 +1,10 @@
 @extends('layouts.layout-tu')
 
-@section('title')
+@section('header')
     Ubah Data Siswa: {{ $siswa->nama }}
     @endsection
 
 @section('content')
-
     {{ Form::model($siswa, ['method' => 'PATCH', 'route' => ['siswa.update', $siswa->id]]) }}
 
     <div class="form-group">
