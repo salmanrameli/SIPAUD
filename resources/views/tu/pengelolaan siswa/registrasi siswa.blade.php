@@ -1,7 +1,7 @@
 @extends('layouts.layout-tu')
 
 @section('header')
-    Pengelolaan Data Siswa
+    Registrasi Siswa
     @endsection
 
 @section('content')
