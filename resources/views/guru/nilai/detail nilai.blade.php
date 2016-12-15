@@ -8,7 +8,7 @@
     <table class="table">
         @foreach($hasil as $nilai)
             <tr>
-                <th>ID</th>
+                <th>ID Pelajaran</th>
                 <td>{{ $nilai->id }}</td>
             </tr>
             <tr>
