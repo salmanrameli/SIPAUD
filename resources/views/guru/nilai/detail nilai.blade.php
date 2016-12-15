@@ -30,7 +30,7 @@
             <tr>
                 <td>
                     <div class="pull-left">
-                        <a href="{{ route('guru.nilai.edit_nilai', ['id' => $nilai->id, 'siswa' => $nilai->nomor_induk]) }}"><button type="button" class="btn btn-default">Ubah Nilai</button></a>
+                        <a href="{{ route('guru.nilai.edit_nilai', ['id' => $nilai->id, 'siswa' => $nilai->nomor_induk]) }}"><button type="button" class="btn btn-warning">Ubah Nilai</button></a>
                     </div>
                 </td>
                 {{--<td>--}}
