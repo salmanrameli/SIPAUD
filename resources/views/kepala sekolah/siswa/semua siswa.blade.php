@@ -11,6 +11,7 @@
                 <th>Nomor Induk</th>
                 <th>Nama Siswa</th>
                 <th>Tanggal Lahir</th>
+                <th>Alamat</th>
                 <th>Angkatan</th>
             </tr>
             @foreach($hasil as $siswa)
@@ -18,6 +19,7 @@
                     <td>{{ $siswa->id }}</td>
                     <td>{{ $siswa->nama }}</td>
                     <td>{{ $siswa->tanggal_lahir }}</td>
+                    <td>{{ $siswa->alamat }}</td>
                     <td>{{ $siswa->angkatan }}</td>
                     <td><div class="pull-right">
                             <a href="{{ route('kepsek.siswa.show', ['id' => $siswa->id]) }}"><button type="button" class="btn btn-default">Lihat Siswa</button></a>
